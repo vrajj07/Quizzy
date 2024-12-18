@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Quizzy{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="bg-light">
+        <div class="hero bg-light">
+            <h1>Welcome to Quizzy!!</h1>
+            <p>Test your knowledge and compete with friends on fun quizzes.</p>
+            <a href="/quiz" class="btn btn-start">Start Quiz</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">What is Quizzy?</h2>
+            <p class="text-center lead mb-5">Quizzy is an engaging platform where you can test your knowledge in various subjects. Whether you're looking to challenge yourself or just have fun, we have quizzes for everyone!</p>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-cogs fa-3x mb-3 text-primary"></i>
+                    <h4>Customizable Quizzes</h4>
+                    <p>Choose from a wide range of quiz categories and difficulty levels to personalize your quiz experience.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-trophy fa-3x mb-3 text-primary"></i>
+                    <h4>Track Your Progress</h4>
+                    <p>See your results, monitor your progress, and compete with friends for the top score!</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+                    <h4>Play with Friends</h4>
+                    <p>Challenge your friends to beat your score or team up for collaborative quizzes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Users Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <p class="card-text">"Quizzy has made learning fun again! The quizzes are engaging!"</p>
+                            <footer class="blockquote-footer bg-dark text-light">John Doe</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <p class="card-text">"I challenged my friends to quizzes, and we had a blast. Highly recommended!"</p>
+                            <footer class="blockquote-footer bg-dark text-light">Jane Smith</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <p class="card-text">"Great variety of quizzes and an easy-to-use interface. I can't wait to take more!"</p>
+                            <footer class="blockquote-footer bg-dark text-light">Michael Johnson</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-footer bg-light text-dark text-center py-5">
+        <div class="container">
+            <h1 class="mb-4">Stay Updated with Quizzy!</h1>
+            <p class="mb-4">Subscribe to our newsletter for the latest quizzes, features, and more fun updates!</p>
+            <a href="/subscribe" class="btn btn-primary btn-lg">Subscribe Now</a>
+        </div>
+    </section>
+    
+{% endblock %}

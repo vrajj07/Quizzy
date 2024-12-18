@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Quizzy - Quiz Results{% endblock %}
+
+{% block content %}
+    <div class="container py-5 text-center">
+        <h2>Quiz Results</h2>
+        <p>You answered {{ correct_answers }} out of {{ total_questions }} questions correctly.</p>
+        <a href="{% url 'quiz' %}" class="btn btn-primary">Take Another Quiz</a>
+    </div>
+{% endblock %}

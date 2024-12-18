@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Choose Category{% endblock %}
+
+{% block content %}
+    <div class="container py-5">
+        <h2 class="text-center mb-5">Choose a Category</h2>
+
+        <!-- Form to choose a category -->
+        <form method="GET" action="#">
+            <div class="mb-3">
+                <label for="category" class="form-label">Select a Category</label>
+                <select id="category" class="form-select" name="category_id" required>
+                    <option value="" disabled selected>Choose a Category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" id="startQuizBtn">Start Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to dynamically redirect with the selected category ID
+        document.getElementById('startQuizBtn').addEventListener('click', function() {
+            const categoryId = document.getElementById('category').value;
+            if (categoryId) {
+                window.location.href = "{% url 'start_quiz' 0 %}".replace(0, categoryId);
+            } else {
+                alert('Please select a category before proceeding.');
+            }
+        });
+    </script>
+{% endblock %}
